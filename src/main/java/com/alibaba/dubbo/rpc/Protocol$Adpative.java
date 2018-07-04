@@ -8,7 +8,7 @@ import com.alibaba.dubbo.common.extension.ExtensionLoader;
  * @author xh.d
  * @since 2018/7/3 10:55
  */
-public class Adpative implements com.alibaba.dubbo.rpc.Protocol {
+public class Protocol$Adpative implements com.alibaba.dubbo.rpc.Protocol {
     public void destroy() {
         throw new UnsupportedOperationException("method public abstract void com.alibaba.dubbo.rpc.Protocol.destroy() of interface com.alibaba.dubbo.rpc.Protocol is not adaptive method!");
     }

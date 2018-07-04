@@ -2,7 +2,7 @@ package com.alibaba.dubbo.rpc.cluster;
 
 import com.alibaba.dubbo.common.extension.ExtensionLoader;
 
-public class Adaptive implements com.alibaba.dubbo.rpc.cluster.Cluster {
+public class Cluster$Adaptive implements com.alibaba.dubbo.rpc.cluster.Cluster {
     public com.alibaba.dubbo.rpc.Invoker join(com.alibaba.dubbo.rpc.cluster.Directory arg0)  {
         if (arg0 == null)
             throw new IllegalArgumentException("com.alibaba.dubbo.rpc.cluster.Directory argument == null");

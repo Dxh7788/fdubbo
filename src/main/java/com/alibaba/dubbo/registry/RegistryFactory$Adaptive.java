@@ -2,7 +2,7 @@ package com.alibaba.dubbo.registry;
 
 import com.alibaba.dubbo.common.extension.ExtensionLoader;
 
-public class Adaptive implements com.alibaba.dubbo.registry.RegistryFactory {
+public class RegistryFactory$Adaptive implements com.alibaba.dubbo.registry.RegistryFactory {
     public com.alibaba.dubbo.registry.Registry getRegistry(com.alibaba.dubbo.common.URL arg0) {
         if (arg0 == null) throw new IllegalArgumentException("url == null");
         com.alibaba.dubbo.common.URL url = arg0;
