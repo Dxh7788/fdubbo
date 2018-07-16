@@ -95,4 +95,6 @@ return new AbstractProxyInvoker<T>(proxy, type, url) {
         };
 编译后该内部类会被标识为JavassistProxyFactory$1,这也是真正的执行invoker.
 wrapper0==>JavassistProxyFactory$1==>invokerDelegete,然后invokerDelegate会被重新export,此次的协议为DubboProtocol.这里会进行真正的Exporter,形成DubboExporter,执行DubboExporter<T> exporter = new DubboExporter<T>(invoker, key, exporterMap);并保存在缓存中。然后
-会有两个装饰类装饰,DubboExporter经过ProtocolFilterListenerWrapper会形成一个拥有群组过滤器链路的invoker内部类ProtocolFilterListenerWrapper$1,然后经过ProtocolListenerWrapper
+会有两个装饰类装饰,DubboExporter经过ProtocolFilterListenerWrapper会形成一个拥有群组过滤器链路的invoker内部类ProtocolFilterListenerWrapper$1,然后经过ProtocolListenerWrapper形成新的ListenerExporterWrapper
+最终的链条为wrapper0==>JavassistProxyFactory$1==>invokerDelegete=>DubboExporter=>ProtocolFilterListenerWrapper$1==>ListenerExporterWrapper
+这里有一个invoker向exporter转换的过程
