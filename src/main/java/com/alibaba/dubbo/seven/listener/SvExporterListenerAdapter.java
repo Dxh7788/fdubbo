@@ -1,5 +1,6 @@
 package com.alibaba.dubbo.seven.listener;
 
+import com.alibaba.dubbo.common.extension.Activate;
 import com.alibaba.dubbo.rpc.Exporter;
 import com.alibaba.dubbo.rpc.RpcException;
 import com.alibaba.dubbo.rpc.listener.ExporterListenerAdapter;
@@ -10,6 +11,7 @@ import com.alibaba.dubbo.rpc.listener.ExporterListenerAdapter;
  * @author xh.d
  * @since 2018/7/16 17:31
  */
+@Activate
 public class SvExporterListenerAdapter extends ExporterListenerAdapter {
 
     @Override
