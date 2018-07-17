@@ -2,6 +2,7 @@ package com.alibaba.dubbo.seven.listener;
 
 import com.alibaba.dubbo.common.extension.Activate;
 import com.alibaba.dubbo.rpc.Exporter;
+import com.alibaba.dubbo.rpc.Invoker;
 import com.alibaba.dubbo.rpc.RpcException;
 import com.alibaba.dubbo.rpc.listener.ExporterListenerAdapter;
 
@@ -16,6 +17,7 @@ public class SvExporterListenerAdapter extends ExporterListenerAdapter {
 
     @Override
     public void exported(Exporter<?> exporter) throws RpcException {
-        System.out.println(">>>>>>使用7合接口暴露监听器....");
+        Invoker invoker = exporter.getInvoker();
+        System.out.println(invoker.getInterface().getName());
     }
 }
