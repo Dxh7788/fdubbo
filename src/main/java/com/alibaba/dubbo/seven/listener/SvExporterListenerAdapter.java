@@ -18,6 +18,6 @@ public class SvExporterListenerAdapter extends ExporterListenerAdapter {
     @Override
     public void exported(Exporter<?> exporter) throws RpcException {
         Invoker invoker = exporter.getInvoker();
-        System.out.println(invoker.getInterface().getName());
+        System.out.println("暴露的接口为:"+invoker.getInterface().getName());
     }
 }
